@@ -1,0 +1,7 @@
+interface Curly_ISimpleTest {
+	easyField: string;
+}
+
+class SimpleTest extends CurlySchema<Curly_ISimpleTest> implements Curly_ISimpleTest {
+	easyField: string;
+}

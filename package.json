@@ -1,4 +1,22 @@
 {
-  "name": "curly_orm",
-  "packageManager": "yarn@4.5.1"
+  "name": "curly-orm",
+  "packageManager": "yarn@4.5.1",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test:unit": "jest",
+    "test:lint": "eslint"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=23.1.0"
+  }
 }

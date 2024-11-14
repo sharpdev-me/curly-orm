@@ -1,0 +1,3 @@
+schema SimpleTest {
+	easyField: String;
+}
