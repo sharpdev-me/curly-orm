@@ -10,3 +10,7 @@ export function getTestFile(name: string): [string, string] {
 
 	return [sourceContent, outContent];
 }
+
+export function getFile(name: string): string {
+	return readFileSync(resolve(__dirname, `./examples/${name}.curly`), {encoding:"utf-8"});
+}

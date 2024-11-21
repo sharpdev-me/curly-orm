@@ -1,0 +1,82 @@
+[
+	{
+		"line": 1,
+		"pos": 1,
+		"tokenStart": 0,
+		"tokenEnd": 1,
+		"type": 4,
+		"value": "{"
+	},
+	{
+		"line": 1,
+		"pos": 2,
+		"tokenStart": 1,
+		"tokenEnd": 2,
+		"type": 4,
+		"value": "{"
+	},
+	{
+		"line": 1,
+		"pos": 3,
+		"tokenStart": 2,
+		"tokenEnd": 3,
+		"type": 5,
+		"value": "}"
+	},
+	{
+		"line": 1,
+		"pos": 5,
+		"tokenStart": 4,
+		"tokenEnd": 9,
+		"type": 14,
+		"value": "field"
+	},
+	{
+		"line": 1,
+		"pos": 10,
+		"tokenStart": 9,
+		"tokenEnd": 10,
+		"type": 1,
+		"value": ":"
+	},
+	{
+		"line": 1,
+		"pos": 12,
+		"tokenStart": 11,
+		"tokenEnd": 15,
+		"type": 14,
+		"value": "Name"
+	},
+	{
+		"line": 1,
+		"pos": 16,
+		"tokenStart": 15,
+		"tokenEnd": 16,
+		"type": 10,
+		"value": "<"
+	},
+	{
+		"line": 1,
+		"pos": 17,
+		"tokenStart": 16,
+		"tokenEnd": 19,
+		"type": 14,
+		"value": "Opt"
+	},
+	{
+		"line": 1,
+		"pos": 20,
+		"tokenStart": 19,
+		"tokenEnd": 20,
+		"type": 11,
+		"value": ">"
+	},
+	{
+		"line": 2,
+		"pos": 1,
+		"tokenStart": 21,
+		"tokenEnd": 22,
+		"type": 5,
+		"value": "}"
+	}
+]

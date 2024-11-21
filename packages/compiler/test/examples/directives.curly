@@ -1,0 +1,19 @@
+schema Directives {
+	if(true) {
+		included: String;
+	}
+
+	if(false) {
+		notIncluded: String;
+	} else {
+		includedByElse: String;
+	}
+
+	if(val < 10) {
+		notIncluded: String;
+	} else if(true) {
+		includedByElseIf: String;
+	} else {
+		notIncluded: String;
+	}
+}

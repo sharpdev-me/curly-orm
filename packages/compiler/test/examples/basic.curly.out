@@ -1,7 +1,66 @@
-interface Curly_ISimpleTest {
-	easyField: string;
-}
-
-class SimpleTest extends CurlySchema<Curly_ISimpleTest> implements Curly_ISimpleTest {
-	easyField: string;
-}
+[
+	{
+		"line": 1,
+		"pos": 1,
+		"tokenStart": 0,
+		"tokenEnd": 6,
+		"type": 0,
+		"value": "schema"
+	},
+	{
+		"line": 1,
+		"pos": 8,
+		"tokenStart": 7,
+		"tokenEnd": 17,
+		"type": 14,
+		"value": "SimpleTest"
+	},
+	{
+		"line": 1,
+		"pos": 19,
+		"tokenStart": 18,
+		"tokenEnd": 19,
+		"type": 4,
+		"value": "{"
+	},
+	{
+		"line": 2,
+		"pos": 2,
+		"tokenStart": 21,
+		"tokenEnd": 30,
+		"type": 14,
+		"value": "easyField"
+	},
+	{
+		"line": 2,
+		"pos": 11,
+		"tokenStart": 30,
+		"tokenEnd": 31,
+		"type": 1,
+		"value": ":"
+	},
+	{
+		"line": 2,
+		"pos": 13,
+		"tokenStart": 32,
+		"tokenEnd": 38,
+		"type": 14,
+		"value": "String"
+	},
+	{
+		"line": 2,
+		"pos": 19,
+		"tokenStart": 38,
+		"tokenEnd": 39,
+		"type": 2,
+		"value": ";"
+	},
+	{
+		"line": 3,
+		"pos": 1,
+		"tokenStart": 40,
+		"tokenEnd": 41,
+		"type": 5,
+		"value": "}"
+	}
+]

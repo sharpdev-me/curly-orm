@@ -1,0 +1,8 @@
+schema SimpleAST {
+	firstField: String = "hello";
+	secondField: number,
+	thirdField: SimpleAST<Ref>,
+	fourthField: boolean = RandoValue < Different<Modifier>;
+
+	fifthField: String(maxSize = 5);
+}
