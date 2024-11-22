@@ -242,10 +242,14 @@ export function makeAST(tokens: Token<TokenType>[]): ModuleNode {
 	}
 
 	const body: SchemaNode[] = [];
+	const imports: ImportNode[] = [];
 
 	while(current < tokens.length) {
-		body.push(walkType(SchemaNode));
+		const node = walkType<SchemaNode | ImportNode>(SchemaNode, ImportNode);
+
+		if(node instanceof SchemaNode) body.push(node);
+		if(node instanceof ImportNode) imports.push(node);
 	}
 
-	return new ModuleNode(body);
+	return new ModuleNode(body, imports);
 }
