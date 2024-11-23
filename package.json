@@ -1,5 +1,5 @@
 {
-  "name": "curly-orm",
+  "name": "@curly-orm/monorepo",
   "packageManager": "yarn@4.5.1",
   "type": "module",
   "workspaces": [
@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "test:unit": "jest",
-    "test:lint": "eslint"
+    "test:lint": "eslint",
+    "build:all": "yarn workspaces foreach --since run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

@@ -1,4 +1,24 @@
 {
   "name": "@curly-orm/compiler",
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@4.5.1",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": "./lib/program.js",
+    "./*": "./lib/*.js",
+    "./*.js": "./lib/*.js",
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.1",
+    "eslint": "^9.15.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "5.6.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "version": "0.1.0"
 }

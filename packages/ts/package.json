@@ -1,0 +1,10 @@
+{
+	"name": "@curly-orm/ts",
+	"packageManager": "yarn@4.5.1",
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@curly-orm/compiler": "workspace:^"
+	}
+}
