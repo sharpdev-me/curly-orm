@@ -1,5 +1,5 @@
 {
-	"name": "@curly-orm/ts",
+	"name": "@curly-orm/database",
 	"packageManager": "yarn@4.5.3",
 	"scripts": {
 		"build": "tsc"
@@ -9,10 +9,6 @@
 		"./*": "./lib/*.js",
 		"./runtime": "./lib/runtime/index.js",
 		"./package.json": "./package.json"
-	},
-	"dependencies": {
-		"@curly-orm/compiler": "workspace:^",
-		"@curly-orm/database": "workspace:^"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.15.0",

@@ -1,0 +1,4 @@
+schema SimpleSchema {
+	firstField: string;
+	lastField: number;
+}

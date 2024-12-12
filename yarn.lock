@@ -399,6 +399,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@curly-orm/database@workspace:^, @curly-orm/database@workspace:packages/database":
+  version: 0.0.0-use.local
+  resolution: "@curly-orm/database@workspace:packages/database"
+  dependencies:
+    "@eslint/js": "npm:^9.15.0"
+    "@types/jest": "npm:^29.5.14"
+    "@types/node": "npm:^22.9.1"
+    eslint: "npm:^9.15.0"
+    jest: "npm:^29.7.0"
+    ts-jest: "npm:^29.2.5"
+    typescript: "npm:5.6.3"
+    typescript-eslint: "npm:^8.15.0"
+  languageName: unknown
+  linkType: soft
+
 "@curly-orm/monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "@curly-orm/monorepo@workspace:."
@@ -419,6 +434,15 @@ __metadata:
   resolution: "@curly-orm/ts@workspace:packages/ts"
   dependencies:
     "@curly-orm/compiler": "workspace:^"
+    "@curly-orm/database": "workspace:^"
+    "@eslint/js": "npm:^9.15.0"
+    "@types/jest": "npm:^29.5.14"
+    "@types/node": "npm:^22.9.1"
+    eslint: "npm:^9.15.0"
+    jest: "npm:^29.7.0"
+    ts-jest: "npm:^29.2.5"
+    typescript: "npm:5.6.3"
+    typescript-eslint: "npm:^8.15.0"
   languageName: unknown
   linkType: soft
 

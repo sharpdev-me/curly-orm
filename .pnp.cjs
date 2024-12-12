@@ -19,6 +19,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/compiler"\
     },\
     {\
+      "name": "@curly-orm/database",\
+      "reference": "workspace:packages/database"\
+    },\
+    {\
       "name": "@curly-orm/ts",\
       "reference": "workspace:packages/ts"\
     }\
@@ -27,6 +31,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@curly-orm/compiler", ["workspace:packages/compiler"]],\
+    ["@curly-orm/database", ["workspace:packages/database"]],\
     ["@curly-orm/monorepo", ["workspace:."]],\
     ["@curly-orm/ts", ["workspace:packages/ts"]]\
   ],\
@@ -892,6 +897,23 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@curly-orm/database", [\
+      ["workspace:packages/database", {\
+        "packageLocation": "./packages/database/",\
+        "packageDependencies": [\
+          ["@curly-orm/database", "workspace:packages/database"],\
+          ["@eslint/js", "npm:9.15.0"],\
+          ["@types/jest", "npm:29.5.14"],\
+          ["@types/node", "npm:22.9.1"],\
+          ["eslint", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:9.15.0"],\
+          ["jest", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:29.7.0"],\
+          ["ts-jest", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:29.2.5"],\
+          ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
+          ["typescript-eslint", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:8.15.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@curly-orm/monorepo", [\
       ["workspace:.", {\
         "packageLocation": "./",\
@@ -914,7 +936,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/ts/",\
         "packageDependencies": [\
           ["@curly-orm/ts", "workspace:packages/ts"],\
-          ["@curly-orm/compiler", "workspace:packages/compiler"]\
+          ["@curly-orm/compiler", "workspace:packages/compiler"],\
+          ["@curly-orm/database", "workspace:packages/database"],\
+          ["@eslint/js", "npm:9.15.0"],\
+          ["@types/jest", "npm:29.5.14"],\
+          ["@types/node", "npm:22.9.1"],\
+          ["eslint", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:9.15.0"],\
+          ["jest", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:29.7.0"],\
+          ["ts-jest", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:29.2.5"],\
+          ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
+          ["typescript-eslint", "virtual:4f602ae2d18b82656319e653687e416128dc2cfc5d24742097001f92e1580ea54153809f53118965f0acae27f77fc19cb3919f1c441c44e81f801862f4727979#npm:8.15.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -8192,7 +8223,7 @@ class MountFS extends BasePortableFakeFS {
         if (this.notMount.has(filePath))
           continue;
         try {
-          if (this.typeCheck !== null && (this.baseFs.lstatSync(filePath).mode & fs.constants.S_IFMT) !== this.typeCheck) {
+          if (this.typeCheck !== null && (this.baseFs.statSync(filePath).mode & fs.constants.S_IFMT) !== this.typeCheck) {
             this.notMount.add(filePath);
             continue;
           }
